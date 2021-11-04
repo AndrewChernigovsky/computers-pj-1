@@ -1,0 +1,49 @@
+.tabs {
+  display: flex;
+  justify-content: center;
+
+  &__header {
+    display: flex;
+    padding-left: 0;
+  }
+
+  &__body {
+    min-height: 30rem;
+    background-color: transparent;
+  }
+
+  &__content {
+    display: none;
+    padding: 1rem 0;
+    min-height: 10rem;
+    width: inherit;
+    text-align: center;
+  }
+
+  &__content.active {
+    display: block;
+  }
+
+  &__tab {
+    min-width: 20rem;
+    height: max-content;
+    background-color: grey;
+  }
+
+  &__tab.active {
+    background-color: blanchedalmond;
+    display: block;
+    transition: 0.3s ease-in-out;
+
+    .tabs__link {
+      color: black;
+    }
+  }
+
+  &__link {
+    font-size: 2.4rem;
+    color: wheat;
+    background-color: transparent;
+    border: none;
+  }
+}

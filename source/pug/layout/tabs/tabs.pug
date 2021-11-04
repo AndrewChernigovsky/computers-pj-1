@@ -1,0 +1,41 @@
+block tabs
+  .tabs
+    .tabs__wrapper
+      ul.tabs__header
+        li(data-tab='1').tabs__tab.js-tabs-header.active
+          button(type='button').tabs__link Calculators
+        li(data-tab='2').tabs__tab.js-tabs-header
+          button(type='button').tabs__link Sites
+        li(data-tab='3').tabs__tab.js-tabs-header
+          button(type='button').tabs__link privet3
+        li(data-tab='4').tabs__tab.js-tabs-header
+          button(type='button').tabs__link privet4
+        li(data-tab='5').tabs__tab.js-tabs-header
+          button(type='button').tabs__link privet5
+      .tabs__body
+        div(data-tab='1').tabs__content.js-tabs-body.active
+          .tabs
+            .tabs__wrapper
+                ul.tabs__header
+                  li(data-tab='1').tabs__tab.js-tabs-calc-header.active
+                    button(type='button').tabs__link Simple
+                  li(data-tab='2').tabs__tab.js-tabs-calc-header
+                    button(type='button').tabs__link Normal
+                  li(data-tab='3').tabs__tab.js-tabs-calc-header
+                    button(type='button').tabs__link Hard
+                .tabs__body
+                  div(data-tab='1').tabs__content.js-tabs-calc-body.active
+                    .tabs__content-wrapper
+                      include ../../blocks/calculatorOne
+                  div(data-tab='2').tabs__content.js-tabs-calc-body
+                    .tabs__content-wrapper
+                      include ../../blocks/calculatorTwo
+                  div(data-tab='3').tabs__content.js-tabs-calc-body
+                    .tabs__content-wrapper
+                      include ../../blocks/calculatorThree
+
+
+        div(data-tab='2').tabs__content.js-tabs-body
+          .tabs__content-wrapper
+        div(data-tab='3').tabs__content.js-tabs-body
+          .tabs__content-wrapper

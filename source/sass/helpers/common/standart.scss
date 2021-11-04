@@ -1,0 +1,40 @@
+body {
+  font-size: 1.6rem;
+  color: $white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+.main-header {
+  nav {
+    min-width: 60rem;
+    max-width: 77rem;
+    margin: 0 auto;
+  }
+}
+
+
+.main-section {
+  min-width: 60rem;
+  max-width: 77rem;
+  margin: 0 auto;
+  text-align: center;
+
+  .section-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 30rem;
+    max-width: max-content;
+    margin: 0 auto;
+
+    .secondary-heading {
+      font-size: 2.4rem;
+    }
+
+    .primary-text {
+      font-size: 1.6rem;
+    }
+  }
+}
+
