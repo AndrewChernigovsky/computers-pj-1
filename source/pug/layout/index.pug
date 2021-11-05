@@ -4,8 +4,7 @@ html(lang='en,ru').page
   block vars
   title #{title}
   body.page__body
-    .container
-      block header
-      block main
-      block footer
-      include ../helpers/common
+    block header
+    block main
+    block footer
+    include ../helpers/common

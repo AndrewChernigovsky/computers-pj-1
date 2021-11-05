@@ -1,50 +1,51 @@
 header.main-header
-  nav.main-nav
-    .logo
-      .logo__wrapper
-        .logo__img
-          a.logo__link(href="index.html")
-            picture
-              source(media="(min-width:768px)" srcset="image/icons/logo4x.webp")
-              source(media="(min-width:320px)" srcset="image/icons/logo2x.webp")
-              source(media="(min-width:768px)" srcset="image/icons/logo4x.png")
-              source(media="(min-width:320px)" srcset="image/icons/logo2x.png")
-              img(src="image/icons/logo2x.png" alt="logo")
+  .container
+    nav.main-nav
+      .logo
+        .logo__wrapper
+          .logo__img
+            a.logo__link(href="index.html")
+              picture
+                source(media="(min-width:768px)" srcset="image/icons/logo4x.webp")
+                source(media="(min-width:320px)" srcset="image/icons/logo2x.webp")
+                source(media="(min-width:768px)" srcset="image/icons/logo4x.png")
+                source(media="(min-width:320px)" srcset="image/icons/logo2x.png")
+                img(src="image/icons/logo2x.png" alt="logo")
 
-    ul.main-nav__list
-      li.main-nav__item
-        a.main-nav__link(href="index.html") Главная
-      li.main-nav__item
-        a.main-nav__link(href="courses.html") Курсы
-      li.main-nav__item
-        a.main-nav__link(href="dates.html") Расписание
-      li.main-nav__item
-        a.main-nav__link(href="speakers.html") Преподаватели
-      li.main-nav__item
-        a.main-nav__link(href="emails.html") Рассылка
-      li.main-nav__item
-        a.main-nav__link(href="contacts.html") Контакты
+      ul.main-nav__list
+        li.main-nav__item
+          a.main-nav__link(href="index.html") Главная
+        li.main-nav__item
+          a.main-nav__link(href="courses.html") Курсы
+        li.main-nav__item
+          a.main-nav__link(href="dates.html") Расписание
+        li.main-nav__item
+          a.main-nav__link(href="speakers.html") Преподаватели
+        li.main-nav__item
+          a.main-nav__link(href="emails.html") Рассылка
+        li.main-nav__item
+          a.main-nav__link(href="contacts.html") Контакты
 
-    .sign
-       button.btn.btn-primary.btn-sign(type="button") Зайти в кабинет
+      .sign
+        button.btn.btn-primary.btn-sign(type="button") Зайти в кабинет
 
-  .main-header__date
-    .main-header__date-wrapper
-      h1
-        | Первый курс
-        br
-        | по компьютерной сборке
-      .time-date
-        .time-date__wrapper
-          p.number 12
-          p.subnumber Дней
-        .time-date__wrapper
-          p.number 12
-          p.subnumber Часов
-        .time-date__wrapper
-          p.number 12
-          p.subnumber Минут
-        .time-date__wrapper
-          p.number 12
-          p.subnumber Секунд
+    .main-header__date
+      .main-header__date-wrapper
+        h1
+          | Первый курс
+          br
+          | по компьютерной сборке
+        .time-date
+          .time-date__wrapper
+            p.number 12
+            p.subnumber Дней
+          .time-date__wrapper
+            p.number 12
+            p.subnumber Часов
+          .time-date__wrapper
+            p.number 12
+            p.subnumber Минут
+          .time-date__wrapper
+            p.number 12
+            p.subnumber Секунд
 

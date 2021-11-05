@@ -1,0 +1,25 @@
+.success {
+  background-color: $main;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+ }
+
+.static {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.static-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 25rem;
+}
+
+.progress-bar {
+  min-width: 60%;
+}

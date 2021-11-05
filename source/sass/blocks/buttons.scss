@@ -17,3 +17,11 @@
   background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
   padding: 1rem 3rem;
 }
+
+.btn-success {
+  background-color: pink;
+  border: none;
+  border-radius: 5rem 5rem 5rem 5rem;
+  background: linear-gradient(to bottom right, $btn-secondary, $btn-secondary1);
+  padding: 1rem 3rem;
+}
