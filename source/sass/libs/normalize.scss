@@ -9,11 +9,19 @@ body {
 }
 
 .container {
-  min-width: 320px;
-  max-width: 1440px;
+  min-width: 32rem;
   min-height: 100%;
   margin: 0 auto;
   padding: 0 2rem;
+
+  @media screen and (min-width: $sm) {
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: $exlg) {
+    max-width: 192rem;
+    padding: 0 8rem;
+  }
 }
 
 main {
@@ -92,8 +100,13 @@ textarea {
   font-size: 100%;
   line-height: 1.15;
   margin: 0;
+  border: none;
+  padding: 0;
 }
 
+button {
+  cursor: pointer;
+}
 
 button,
 input {

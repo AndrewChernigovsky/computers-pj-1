@@ -1,0 +1,24 @@
+.logo{
+  &__wrapper {
+
+  }
+
+  &__img {
+    picture {
+      flex: none;
+
+      img {
+        flex: none;
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+        display: inline-block;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+

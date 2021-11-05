@@ -1,0 +1,19 @@
+.btn {
+  color: $white;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.btn-primary {
+
+}
+
+.btn-sign{
+  background-color: pink;
+  border: none;
+  border-radius: 5rem 5rem 5rem 5rem;
+  background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+  padding: 1rem 3rem;
+}

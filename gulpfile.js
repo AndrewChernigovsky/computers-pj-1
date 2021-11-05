@@ -19,12 +19,9 @@ notify = require('gulp-notify'),
 qgcmq = require('gulp-group-css-media-queries'),
 concat = require('gulp-concat');
 
-function sprite() {
-  return src(['source/image/**/*.svg'])
-    .pipe(plumber())
-    .pipe(svgsprite())
-    .pipe(plumber.stop())
-    .pipe(dest('production/image/sprite/'))
+function copyFonts() {
+  return src(['source/fonts/*.ttf'])
+  .pipe(dest('production/fonts/'))
 }
 
 function fontW() {
@@ -146,7 +143,7 @@ function sprite() {
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
-    .pipe(dest("production/image"))
+    .pipe(dest("production/image/"))
     .pipe(sync.stream())
 }
 
@@ -181,6 +178,7 @@ exports.default = series(
   copyImages,
   fontW,
   fontW2,
+  copyFonts,
 
   parallel(
     pug2html,
