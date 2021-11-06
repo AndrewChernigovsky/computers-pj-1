@@ -1,16 +1,17 @@
 .success {
   background-color: $main;
+  margin-bottom: -2rem;
 
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -3.5rem;
   }
  }
 
 .static {
   display: grid;
-  row-gap: 2rem;
 }
 
 .static-info {
@@ -21,5 +22,42 @@
 }
 
 .progress-bar {
-  min-width: 60%;
+  min-width: 20rem;
+  &__wrapper {
+    background-color: $white;
+    width: 20rem;
+    height: 0.6rem;
+    position: relative;
+
+    @media screen and (min-width: $lg) {
+      width: 40rem;
+    }
+
+    @media screen and (min-width: $tb) {
+      width: 50rem;
+    }
+
+    @media screen and (min-width: $ds) {
+      width: 71.4rem;
+    }
+  }
+  &__value {
+    background: linear-gradient(to bottom right, $btn-secondary, $btn-secondary1);
+    width: 40rem;
+    height: 0.6rem;
+    margin-bottom: 1rem;
+
+    span {
+      position: absolute;
+      top: -2.5rem;
+
+      &:nth-child(2) {
+        left: 20rem;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }

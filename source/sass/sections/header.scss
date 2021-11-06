@@ -14,7 +14,6 @@
   }
 
   &__date-wrapper {
-    margin-left: 23.2rem;
     margin-top: 20rem;
   }
 }
@@ -43,13 +42,10 @@
   }
 
   &__link {
-    font-size: 1.6rem;
-    font-weight: 400;
     color: $white;
     text-decoration: none;
     padding-bottom: 1rem;
     position: relative;
-
 
     &::after {
       content: '';
@@ -90,14 +86,6 @@
     .number {
       margin-bottom: -2rem;
       margin-top: 2rem;
-      font-size: 3.6rem;
-      font-weight: 700;
-    }
-
-    .subnumber {
-      color: $txt_sub;
-      font-size: 1.6rem;
-      font-weight: 400;
     }
   }
 }

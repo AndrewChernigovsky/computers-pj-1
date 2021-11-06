@@ -3,10 +3,13 @@ extends ../layout/index.pug
 block header
   include ../layout/sections/header
   include ../layout/sections/success-section
+
 block main
  section.main-section
+  .bg
   h2.secondary-heading
-  p.primary-text
+  include ../layout/sections/present-section
+  include ../layout/sections/static
 
 block footer
   include ../layout/sections/footer

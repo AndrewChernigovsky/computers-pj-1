@@ -1,0 +1,51 @@
+.present {
+  margin-bottom: 20rem;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5rem;
+  }
+
+  &__product {
+    position: relative;
+
+    picture {
+      flex: none;
+
+      img {
+      width: 48rem;
+      height: 48rem;
+      padding-top: 6rem;
+      margin-right: 5rem;
+      padding-left: 3rem;
+      }
+    }
+
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+
+    &:before {
+      width: 52.6rem;
+      height: 50rem;
+      background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+    }
+
+    &:after {
+      width: 46.6rem;
+      height: 44rem;
+      background-color: $black;
+      left: 3rem;
+      top: 3rem;
+    }
+  }
+
+  &__description {
+    .f-srg {
+      color: $white;
+    }
+  }
+}
