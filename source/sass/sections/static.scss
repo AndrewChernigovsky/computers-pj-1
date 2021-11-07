@@ -21,4 +21,50 @@
       }
     }
   }
+
+  &__date {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__result {
+    min-height: 26rem;
+    display: grid;
+    align-self: baseline;
+
+    .f-srg {
+      line-height: 1.6;
+    }
+
+    .one {
+      height: 8rem;
+    }
+
+    .two {
+      height: 6rem;
+    }
+
+    .three {
+      height: 3rem;
+    }
+
+    .four {
+      height: 1rem;
+    }
+  }
+
+  &__progress-bar {
+    min-width: 100%;
+    background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+  }
+
+  &__result {
+    &:first-child .f-mb{
+      margin-bottom: 1rem;
+    }
+    &:nth-child(2) .f-mb{
+      margin-bottom: 3rem;
+    }
+  }
 }
