@@ -1,0 +1,30 @@
+.profession {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  &__quality {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12rem;
+  }
+  &__things {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 20rem;
+  }
+  &__thing {
+    text-align: center;
+    width: min-content;
+    min-width: 30rem;
+
+    @media screen and (min-width: $tb) {
+      min-width: 32rem;
+    }
+
+    .f-vsrg {
+      line-height: 1.6;
+    }
+  }
+}

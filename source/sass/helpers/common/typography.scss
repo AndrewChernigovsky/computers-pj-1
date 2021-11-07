@@ -3,15 +3,26 @@
   color: orange;
 }
 
-.f-bbw {
+.f-vbbw {
   font-weight: 700;
   font-size: 6.4rem;
   color: $white;
 }
 
+.f-bb {
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+
 .f-mb {
   font-size: 3.6rem;
   font-weight: 700;
+}
+
+.f-mbm {
+  font-size: 2.4rem;
+  font-weight: 500;
 }
 
 .f-sbw {
@@ -25,3 +36,8 @@
   font-weight: 400;
 }
 
+.f-vsrg {
+  color: $txt_sub;
+  font-size: 1.4rem;
+  font-weight: 400;
+}

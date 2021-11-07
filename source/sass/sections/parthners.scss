@@ -1,0 +1,29 @@
+.parthners {
+  &__wrapper {
+  }
+  &__head {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 6rem;
+
+    picture img{
+      width: 9.6rem;
+      height: 9,6rem;
+      flex: none;
+      transform: rotate(180deg);
+      margin-right: 4rem;
+    }
+  }
+  &__logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  &__logo {
+    width: min-content;
+    min-width: 25%;
+    margin-bottom: 2rem;
+    justify-self: center;
+  }
+}

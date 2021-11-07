@@ -26,15 +26,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 5rem;
+  }
+
+  &__progress-wrapper {
+    height: 8rem;
+    display: flex;
+    align-items: center;
   }
 
   &__result {
     min-height: 26rem;
-    display: grid;
     align-self: baseline;
 
-    .f-srg {
+    .f-vsrg {
       line-height: 1.6;
+      align-self: flex-end;
+      width: 90%;
     }
 
     .one {
@@ -57,14 +65,5 @@
   &__progress-bar {
     min-width: 100%;
     background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
-  }
-
-  &__result {
-    &:first-child .f-mb{
-      margin-bottom: 1rem;
-    }
-    &:nth-child(2) .f-mb{
-      margin-bottom: 3rem;
-    }
   }
 }
