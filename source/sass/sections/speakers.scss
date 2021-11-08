@@ -1,0 +1,26 @@
+.speakers {
+  &__wrapper {
+    margin-bottom: 20rem;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 7.6rem;
+    align-items: center;
+
+    picture img{
+      width: 9.6rem;
+      height: 9.6rem;
+      flex: none;
+      transform: rotate(315deg);
+      margin-right: 4rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

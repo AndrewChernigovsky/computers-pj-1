@@ -1,0 +1,82 @@
+.study{
+  &__wrapper {
+    margin-bottom: 15rem;
+  }
+
+  &__head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 7.6rem;
+
+    picture {
+      margin-bottom: 7.6rem;
+    }
+
+    picture img{
+      width: 9.6rem;
+      height: 9.6rem;
+      flex: none;
+      transform: rotate(136deg);
+    }
+
+    p {
+      width: min-content;
+      min-width: 36rem;
+      text-align: center;
+    }
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 25rem 12rem 25rem;
+    min-height: 55rem;
+    justify-content: center;
+  }
+
+  &__week-block {
+    align-self: center;
+
+    &:first-child {
+      justify-self: flex-end;
+      text-align: right;
+
+      .study__week {
+        &::after {
+          content: '';
+          position: absolute;
+          width: 4rem;
+          background-color: gray;
+          height: 0.1rem;
+          top: 5.1rem;
+          right: -5.7rem;
+        }
+      }
+    }
+    &:last-child {
+      .study__week {
+        &::before {
+          content: '';
+          position: absolute;
+          width: 4rem;
+          background-color: gray;
+          height: 0.1rem;
+          left: -5.6rem;
+          top: 5.5rem;
+        }
+      }
+    }
+  }
+
+  &__week-progress {
+    background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+    width: 0.6rem;
+    margin: 0 auto;
+  }
+
+  &__week {
+    position: relative;
+    margin-bottom: 9.6rem;
+  }
+ }

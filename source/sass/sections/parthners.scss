@@ -1,5 +1,6 @@
 .parthners {
   &__wrapper {
+    margin-bottom: 6rem;
   }
   &__head {
     display: flex;
@@ -9,7 +10,7 @@
 
     picture img{
       width: 9.6rem;
-      height: 9,6rem;
+      height: 9.6rem;
       flex: none;
       transform: rotate(180deg);
       margin-right: 4rem;
