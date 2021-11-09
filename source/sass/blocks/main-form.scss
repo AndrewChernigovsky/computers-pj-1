@@ -1,0 +1,32 @@
+.form-footer {
+  min-height: min-content;
+  min-width: 100%;
+
+  &__email-wrapper{
+    position: relative;
+    min-height: 4.4rem;
+    min-width: 46rem;
+  }
+
+  &__email{
+    min-height: 4.4rem;
+    min-width: 46rem;
+    border: none;
+    border-radius: 5rem 5rem 5rem 5rem;
+    background: $bg-input-form;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    color: $white;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  .btn-form {
+    position: absolute;
+    height: 4.4rem;
+    right: 0;
+    top: 0;
+  }
+}

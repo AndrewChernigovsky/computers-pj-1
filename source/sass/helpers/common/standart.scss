@@ -1,3 +1,16 @@
+.page {
+  &__body {
+    background-image:
+    repeating-linear-gradient($bg 0 1px, transparent 1px 100%),
+    repeating-linear-gradient(90deg, $bg 0 1px, transparent 1px 100%);
+    background-size: 15px 15px;
+    min-width: 100%;
+    min-height: 100rem;
+    z-index: -3;
+    position: relative;
+  }
+}
+
 body {
   font-size: 1.6rem;
   color: $white;
@@ -29,15 +42,4 @@ body {
 .conb {
   max-width: 130rem;
   margin: 0 auto;
-}
-
-.bg {
-  background-image:
-  repeating-linear-gradient($bg 0 1px, transparent 1px 100%),
-  repeating-linear-gradient(90deg, $bg 0 1px, transparent 1px 100%);
-  background-size: 15px 15px;
-  min-width: 100%;
-  min-height: 100rem;
-  z-index: -3;
-  position: absolute;
 }
