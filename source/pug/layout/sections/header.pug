@@ -1,6 +1,6 @@
 header.main-header
   .container
-    nav.main-nav
+    .main-header__wrapper
       .logo
         .logo__wrapper
           .logo__img
@@ -11,23 +11,49 @@ header.main-header
                 source(media="(min-width:768px)" srcset="image/icons/logo4x.png")
                 source(media="(min-width:320px)" srcset="image/icons/logo2x.png")
                 img(src="image/icons/logo2x.png" alt="logo")
-
-      ul.main-nav__list
-        li.main-nav__item
-          a.main-nav__link.f-srg(href="index.html") Главная
-        li.main-nav__item
-          a.main-nav__link.f-srg(href="courses.html") Курсы
-        li.main-nav__item
-          a.main-nav__link.f-srg(href="dates.html") Расписание
-        li.main-nav__item
-          a.main-nav__link.f-srg(href="speakers.html") Преподаватели
-        li.main-nav__item
-          a.main-nav__link.f-srg(href="emails.html") Рассылка
-        li.main-nav__item
-          a.main-nav__link.f-srg(href="contacts.html") Контакты
+      nav.main-nav
+        ul.main-nav__list
+          li.main-nav__item
+            a.main-nav__link.f-srg(href="index.html") Главная
+          li.main-nav__item
+            a.main-nav__link.f-srg(href="courses.html") Курсы
+          li.main-nav__item
+            a.main-nav__link.f-srg(href="dates.html") Расписание
+          li.main-nav__item
+            a.main-nav__link.f-srg(href="speakers.html") Преподаватели
+          li.main-nav__item
+            a.main-nav__link.f-srg(href="emails.html") Рассылка
+          li.main-nav__item
+            a.main-nav__link.f-srg(href="contacts.html") Контакты
 
       .sign
         button.btn.btn-primary.btn-sign(type="button") Зайти в кабинет
+
+
+      .menu#menu
+        span.menu__burger
+        .js-overlay-burger
+        .menu__burger-wrapper
+          .menu__wrapper
+            .logo-m
+              .logo-m__wrapper
+                .logo-m__img
+                  a.logo-m__link(href="index.html")
+                    picture
+                      source(media="(min-width:768px)" srcset="image/icons/logo4x.webp")
+                      source(media="(min-width:320px)" srcset="image/icons/logo2x.webp")
+                      source(media="(min-width:768px)" srcset="image/icons/logo4x.png")
+                      source(media="(min-width:320px)" srcset="image/icons/logo2x.png")
+                      img(src="image/icons/logo2x.png" alt="logo")
+            nav.menu__nav
+              ul.menu__list
+                li.menu__item
+                  span.menu__text
+                    a(href="#").menu__link first
+            button.btn.btn-primary.btn-sign(type="button")
+              svg(fill="white")
+                use(xlink:href="image/sprite.svg#user")
+
 
     .main-header__date.conb
       .main-header__date-wrapper

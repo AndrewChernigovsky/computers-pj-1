@@ -16,54 +16,11 @@
   &__date-wrapper {
     margin-top: 20rem;
   }
-}
 
-.main-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 1rem;
-  align-items: center;
-
-  &__list {
+  &__wrapper {
     display: flex;
     justify-content: space-between;
-
-    @media screen and (min-width: $tb) {
-      min-width: 65rem;
-    }
-
-    @media screen and (min-width: $exlg) {
-      min-width: 80rem;
-    }
-  }
-
-  &__item {
-
-  }
-
-  &__link {
-    color: $white;
-    text-decoration: none;
-    padding-bottom: 1rem;
-    position: relative;
-
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 2.5rem;
-      width: 0;
-      height: 0.2rem;
-      background: $btn-primary;
-      transition: width .3s;
-    }
-
-    &:hover {
-      &::after {
-        width: 100%;
-        transition: 0.3s ease-in-out;
-      }
-    }
+    align-items: center;
   }
 }
 

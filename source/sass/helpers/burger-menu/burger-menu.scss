@@ -1,0 +1,163 @@
+.js-overlay-burger {
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 100;
+  opacity: 0.5;
+  background-color: $black;
+  top: 0;
+  left: 0;
+}
+
+.menu {
+  display: block;
+  cursor: pointer;
+
+  &__wrapper {
+    min-width: 30rem;
+    margin: 0 auto;
+    min-height: 50rem;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: wheat;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__burger {
+    width: 10rem;
+    height: 2rem;
+    background-color: violet;
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+    }
+  }
+
+  &__burger-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: fixed;
+    z-index: 101;
+    min-width: 100%;
+    min-height: 50rem;
+    top: 0;
+    left: 0;
+  }
+
+  button {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    padding: 0;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      flex: none;
+    }
+
+    @media screen and (min-width: $mdlg) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: $mdlg) {
+    display: none;
+  }
+}
+
+.sign {
+  button:first-child {
+    display: none;
+
+    @media screen and (min-width: $mdlg) {
+      display: block;
+    }
+  }
+}
+
+.logo-m {
+  display: block;
+
+    @media screen and (min-width: $mdlg) {
+      display: none;
+    }
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (min-width: $tb) {
+      min-width: 65rem;
+    }
+
+    @media screen and (min-width: $exlg) {
+      min-width: 80rem;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    padding-bottom: 1rem;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2.5rem;
+      width: 0;
+      height: 0.2rem;
+      background: $btn-primary;
+      transition: width .3s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &__burger-logo{
+    display: block;
+
+    @media screen and (min-width: $mdlg) {
+      display: none;
+    }
+  }
+}
+
+
+.main-nav {
+  display: none;
+
+  @media screen and (min-width: $mdlg) {
+    display: block;
+  }
+}
