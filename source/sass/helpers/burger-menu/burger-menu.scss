@@ -14,32 +14,42 @@
   cursor: pointer;
 
   &__wrapper {
-    min-width: 30rem;
+    min-width: 80%;
     margin: 0 auto;
-    min-height: 50rem;
+    min-height: 100vh;
     padding: 2rem 2rem;
-    display: flex;
-    justify-content: center;
-    background-color: wheat;
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 
   &__burger {
-    width: 10rem;
-    height: 2rem;
+    width: 3rem;
+    height: 0.2rem;
     background-color: violet;
-    position: relative;
+    z-index: 102;
+    position: fixed;
+    top: 5rem;
+    left: 15rem;
+    cursor: pointer;
+
     &:after {
       content: '';
       position: absolute;
+      width: 3rem;
+      height: 0.2rem;
+      background-color: violet;
+      bottom: 1rem;
     }
 
     &:before {
       content: '';
       position: absolute;
+      width: 3rem;
+      height: 0.2rem;
+      background-color: violet;
+      bottom: 2rem;
     }
   }
 
@@ -47,13 +57,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: wheat;
 
     position: fixed;
     z-index: 101;
     min-width: 100%;
-    min-height: 50rem;
+    min-height: 100%;
+    opacity: 0.8;
     top: 0;
     left: 0;
+  }
+
+  &__burger-btn {
+    width: 5rem;
+    height: 5rem;
+    z-index: 102;
+    position: fixed;
+    top: 3rem;
+    left: 15rem;
   }
 
   button {
@@ -76,6 +97,21 @@
   @media screen and (min-width: $mdlg) {
     display: none;
   }
+
+  &__nav-wrapper {
+    position: relative;
+    display: grid;
+  }
+  &__nav {
+    display: none;
+  }
+  &__nav.active{
+
+  }
+}
+
+.active {
+  display: block;
 }
 
 .sign {

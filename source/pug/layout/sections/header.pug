@@ -29,9 +29,7 @@ header.main-header
       .sign
         button.btn.btn-primary.btn-sign(type="button") Зайти в кабинет
 
-
       .menu#menu
-        span.menu__burger
         .js-overlay-burger
         .menu__burger-wrapper
           .menu__wrapper
@@ -45,11 +43,14 @@ header.main-header
                       source(media="(min-width:768px)" srcset="image/icons/logo4x.png")
                       source(media="(min-width:320px)" srcset="image/icons/logo2x.png")
                       img(src="image/icons/logo2x.png" alt="logo")
-            nav.menu__nav
-              ul.menu__list
-                li.menu__item
-                  span.menu__text
-                    a(href="#").menu__link first
+            .menu__nav-wrapper
+              .menu__burger-btn
+              span.menu__burger
+              nav.menu__nav
+                ul.menu__list
+                  li.menu__item
+                    span.menu__text
+                      a(href="#").menu__link first
             button.btn.btn-primary.btn-sign(type="button")
               svg(fill="white")
                 use(xlink:href="image/sprite.svg#user")
