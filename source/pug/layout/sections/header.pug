@@ -29,8 +29,47 @@ header.main-header
       .sign
         button.btn.btn-primary.btn-sign(type="button") Зайти в кабинет
 
-      include ../blocks/burger-menu
-
+      .menu#menu
+        .js-overlay-burger
+        .menu__wrapper
+          .logo-m
+            .logo-m__wrapper
+              .logo-m__img
+                a.logo-m__link(href="index.html")
+                  picture
+                    source(media="(min-width:768px)" srcset="image/icons/logo4x.webp")
+                    source(media="(min-width:320px)" srcset="image/icons/logo2x.webp")
+                    source(media="(min-width:768px)" srcset="image/icons/logo4x.png")
+                    source(media="(min-width:320px)" srcset="image/icons/logo2x.png")
+                    img(src="image/icons/logo2x.png" alt="logo")
+          .menu__sign-wrapper
+            .menu__nav-wrapper
+              .menu__burger-btn
+                span.menu__burger
+                span.menu__burger-close
+              nav.menu__nav
+                ul.menu__list
+                  li.menu__item
+                    span.menu__text
+                      a(href="index.html").menu__link Главная
+                  li.menu__item
+                    span.menu__text
+                      a(href="courses.html").menu__link Курсы
+                  li.menu__item
+                    span.menu__text
+                      a(href="dates.html").menu__link Расписание
+                  li.menu__item
+                    span.menu__text
+                      a(href="speakers.html").menu__link Преподаватели
+                  li.menu__item
+                    span.menu__text
+                      a(href="emails.html").menu__link Рассылка
+                  li.menu__item
+                    span.menu__text
+                      a(href="contacts.html").menu__link Контакты
+            button.btn.btn-primary.btn-sign(type="button")
+              svg(fill="white")
+                use(xlink:href="image/sprite.svg#user")
 
     .main-header__date.conb
       .main-header__date-wrapper
