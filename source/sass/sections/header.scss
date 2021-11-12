@@ -1,16 +1,17 @@
 .main-header {
-  min-height: 96rem;
+  min-height: inherit;
   background-color: $main;
   background-image: url('../image/content/main-bg.jpg');
   object-fit: contain;
-  min-width: 76.8rem;
+  min-width: min-content;
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   padding: 2rem 1rem;
 
-  @media screen and (min-width: $tb) {
-    padding: 2rem 5rem;
+  @media screen and (min-width: $mdlg) {
+    background-size: cover;
+    background-position: top right;
   }
 
   &__date-wrapper {

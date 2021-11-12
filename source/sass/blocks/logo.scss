@@ -1,4 +1,6 @@
 .logo{
+  display: none;
+
   &__wrapper {
 
   }
@@ -19,6 +21,10 @@
         }
       }
     }
+  }
+
+  @media screen and (min-width: $mdlg) {
+    display: block;
   }
 }
 

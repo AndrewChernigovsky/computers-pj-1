@@ -1,10 +1,11 @@
 .js-overlay-burger {
+  display: none;
   position: fixed;
   min-width: 100%;
   min-height: 100%;
   z-index: 100;
-  opacity: 0.5;
-  background-color: $black;
+  opacity: 0.4;
+  background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);;
   top: 0;
   left: 0;
 }
@@ -12,13 +13,15 @@
 .menu {
   display: block;
   cursor: pointer;
+  position: fixed;
 
   &__wrapper {
-    min-width: 80%;
+    min-width: 80vw;
     margin: 0 auto;
-    min-height: 100vh;
+    min-height: 2rem;
     padding: 2rem 2rem;
-
+    position: absolute;
+    z-index: 101;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -27,54 +30,82 @@
   &__burger {
     width: 3rem;
     height: 0.2rem;
-    background-color: violet;
-    z-index: 102;
-    position: fixed;
-    top: 5rem;
-    left: 15rem;
+    top: 2.3rem;
+    right: 2.5rem;
+    background-color: $white;
+    display: flex;
+    align-self: center;
     cursor: pointer;
+    position: absolute;
 
-    &:after {
+    &:before, &::after{
       content: '';
       position: absolute;
       width: 3rem;
       height: 0.2rem;
-      background-color: violet;
-      bottom: 1rem;
+      background-color: $white;
     }
 
     &:before {
+      top: 1rem;
+    }
+
+    &:after {
+      bottom: 1rem;
+    }
+  }
+
+  &__burger-close {
+    display: none;
+    position: absolute;
+    top: 2.3rem;
+    right: 5.5rem;
+
+    &:before, &::after{
       content: '';
       position: absolute;
       width: 3rem;
       height: 0.2rem;
-      background-color: violet;
-      bottom: 2rem;
+      background-color: $white;
+    }
+
+    &:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      top: 0;
+      transform: rotate(-45deg);
     }
   }
 
   &__burger-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: wheat;
-
-    position: fixed;
-    z-index: 101;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0.8;
-    top: 0;
-    left: 0;
+    display: none;
   }
 
   &__burger-btn {
-    width: 5rem;
+    width: 20rem;
     height: 5rem;
-    z-index: 102;
-    position: fixed;
-    top: 3rem;
-    left: 15rem;
+    position: relative;
+    top: 0;
+    z-index: 103;
+    display: flex;
+  }
+
+  &__burger-btn.js-burger-menu {
+    .menu__burger {
+      transition: 0.3s ease-in-out;
+      display: none;
+    }
+    .menu__burger-close {
+      transition: 0.3s ease-in-out;
+      display: block;
+    }
+  }
+
+  &__list {
+    line-height: 1.6;
   }
 
   button {
@@ -106,7 +137,32 @@
     display: none;
   }
   &__nav.active{
+    position: absolute;
+    top: 3.5rem;
+    right: 10rem;
+  }
 
+  &__sign-wrapper{
+    min-width: 10rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__link{
+    color: $white;
+    text-decoration: none;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2.5rem;
+      width: 0;
+      height: 0.2rem;
+      background: $btn-primary;
+      transition: width .3s;
+    }
   }
 }
 
@@ -155,7 +211,7 @@
 
   }
 
-  &__link {
+  &__link{
     color: $white;
     text-decoration: none;
     padding-bottom: 1rem;
