@@ -20,6 +20,24 @@
   padding: 1rem 3rem;
 }
 
+.burger-sign {
+  display: none;
+  width: 5rem;
+  height: 5rem;
+  padding: 0;
+  background: transparent;
+
+  svg {
+    width: 3rem;
+    height: 3rem;
+    flex: none;
+  }
+
+  @media screen and (min-width: $mdlg) {
+    display: none;
+  }
+}
+
 // main-seller
 
 .btn-success {

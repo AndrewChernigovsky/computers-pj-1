@@ -5,8 +5,12 @@
 
 .f-vbbw {
   font-weight: 700;
-  font-size: 6.4rem;
+  font-size: 3.4rem;
   color: $white;
+
+  @media screen and (min-width: $mdlg2) {
+    font-size: 6.4rem;
+  }
 }
 
 .f-bb {
@@ -16,8 +20,12 @@
 
 
 .f-mb {
-  font-size: 3.6rem;
+  font-size: 2.4rem;
   font-weight: 700;
+
+  @media screen and (min-width: $mdlg2) {
+    font-size: 3.6rem;
+  }
 }
 
 .f-mbm {

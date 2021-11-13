@@ -1,7 +1,7 @@
 .main-header {
-  min-height: inherit;
-  background-color: $main;
-  background-image: url('../image/content/main-bg.jpg');
+  min-height: min-content;
+  background-color: $black;
+  background-image: url('../image/content/main-bg-sm.jpg');
   object-fit: contain;
   min-width: min-content;
   background-position: top center;
@@ -10,12 +10,18 @@
   padding: 2rem 1rem;
 
   @media screen and (min-width: $mdlg) {
-    background-size: cover;
-    background-position: top right;
+    background-image: url('../image/content/main-bg.jpg');
+    min-height: inherit;
+    background-color: $main;
   }
 
   &__date-wrapper {
-    margin-top: 20rem;
+    margin-top: 10rem;
+    margin-left: 2rem;
+
+    @media screen and (min-width: $mdlg) {
+      margin-top: 20rem;
+    }
   }
 
   &__wrapper {
@@ -29,21 +35,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50rem;
+  width: 30rem;
+
+  @media screen and (min-width: $mdlg) {
+    min-width: 50rem;
+  }
 
   &__wrapper {
     background-color: $main;
-    width: 11rem;
-    height: 11rem;
+    width: 8rem;
+    height: 8rem;
     display: grid;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: $white;
 
+    @media screen and (min-width: $mdlg) {
+      width: 11rem;
+      height: 11rem;
+    }
+
     .number {
       margin-bottom: -2rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
+
+      @media screen and (min-width: $mdlg) {
+        margin-top: 2rem;
+      }
     }
   }
 }

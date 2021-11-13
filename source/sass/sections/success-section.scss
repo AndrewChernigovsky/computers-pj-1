@@ -5,6 +5,7 @@
   &__wrapper {
     display: grid;
     row-gap: 2rem;
+    padding-bottom: 4.5rem;
 
     @media screen and (min-width: $mdlg2) {
       display: flex;

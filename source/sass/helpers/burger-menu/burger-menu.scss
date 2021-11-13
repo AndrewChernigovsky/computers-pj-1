@@ -4,7 +4,7 @@
   min-width: 100%;
   min-height: 100%;
   z-index: 100;
-  opacity: 0.4;
+  opacity: 0.6;
   background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);;
   top: 0;
   left: 0;
@@ -14,9 +14,10 @@
   display: block;
   cursor: pointer;
   position: fixed;
+  z-index: 99;
 
   &__wrapper {
-    min-width: 80vw;
+    min-width: 32rem;
     margin: 0 auto;
     min-height: 2rem;
     padding: 2rem 2rem;
@@ -31,7 +32,7 @@
     width: 3rem;
     height: 0.2rem;
     top: 2.3rem;
-    right: 2.5rem;
+    right: 1rem;
     background-color: $white;
     display: flex;
     align-self: center;
@@ -59,7 +60,7 @@
     display: none;
     position: absolute;
     top: 2.3rem;
-    right: 5.5rem;
+    right: 4rem;
 
     &:before, &::after{
       content: '';
@@ -85,12 +86,13 @@
   }
 
   &__burger-btn {
-    width: 20rem;
+    width: 5rem;
     height: 5rem;
     position: relative;
     top: 0;
     z-index: 103;
     display: flex;
+    order: 2;
   }
 
   &__burger-btn.js-burger-menu {
@@ -108,23 +110,6 @@
     line-height: 1.6;
   }
 
-  button {
-    display: block;
-    width: 5rem;
-    height: 5rem;
-    padding: 0;
-
-    svg {
-      width: 2.4rem;
-      height: 2.4rem;
-      flex: none;
-    }
-
-    @media screen and (min-width: $mdlg) {
-      display: none;
-    }
-  }
-
   @media screen and (min-width: $mdlg) {
     display: none;
   }
@@ -136,10 +121,11 @@
   &__nav {
     display: none;
   }
-  &__nav.active{
+  &__nav.nav-active{
+    display: block;
     position: absolute;
-    top: 3.5rem;
-    right: 10rem;
+    top: 4.5rem;
+    right: -10rem;
   }
 
   &__sign-wrapper{
@@ -166,17 +152,11 @@
   }
 }
 
-.active {
-  display: block;
-}
-
 .sign {
-  button:first-child {
-    display: none;
+  display: none;
 
-    @media screen and (min-width: $mdlg) {
-      display: block;
-    }
+  @media screen and (min-width: $mdlg) {
+    display: block;
   }
 }
 
