@@ -1,0 +1,25 @@
+.menu#menu
+    .js-overlay-burger
+    .menu__burger-wrapper
+        .menu__wrapper
+            .logo-m
+                .logo-m__wrapper
+                .logo-m__img
+                    a.logo-m__link(href="index.html")
+                    picture
+                        source(media="(min-width:768px)" srcset="image/icons/logo4x.webp")
+                        source(media="(min-width:320px)" srcset="image/icons/logo2x.webp")
+                        source(media="(min-width:768px)" srcset="image/icons/logo4x.png")
+                        source(media="(min-width:320px)" srcset="image/icons/logo2x.png")
+                        img(src="image/icons/logo2x.png" alt="logo")
+            .menu__nav-wrapper
+                .menu__burger-btn
+                span.menu__burger
+                nav.menu__nav
+                ul.menu__list
+                    li.menu__item
+                    span.menu__text
+                        a(href="#").menu__link first
+            button.btn.btn-primary.btn-sign(type="button")
+                svg(fill="white")
+                use(xlink:href="image/sprite.svg#user")
