@@ -17,7 +17,7 @@
   z-index: 99;
 
   &__wrapper {
-    min-width: 32rem;
+    min-width: 28rem;
     margin: 0 auto;
     min-height: 2rem;
     padding: 2rem 2rem;
@@ -25,7 +25,7 @@
     z-index: 101;
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
   }
 
   &__burger {

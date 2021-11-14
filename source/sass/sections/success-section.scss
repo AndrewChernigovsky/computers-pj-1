@@ -1,17 +1,24 @@
 .success {
   background-color: $main;
   margin-bottom: -2rem;
+  min-width: 100%;
 
   &__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 4rem;
-    padding-bottom: 4.5rem;
-    padding-top: 2rem;
+    padding: 0 2rem;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
 
     @media screen and (min-width: $lg) {
+      padding: 0 4rem;
+      padding-bottom: 4.5rem;
+      padding-top: 2rem;
+    }
+
+    @media screen and (min-width: $tb) {
       justify-content: space-between;
     }
 
@@ -25,10 +32,35 @@
       margin-top: -3.5rem;
     }
   }
+
+  &__static {
+    margin-bottom: 2rem;
+
+    @media screen and (min-width: $lg) {
+      min-width: 100%;
+    }
+
+    @media screen and (min-width: $tb) {
+      min-width: min-content;
+    }
+  }
  }
 
 .static {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  order: 2;
+
+  @media screen and (min-width: $lg) {
+    order: 1;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: $tb) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .static-info {
@@ -42,9 +74,15 @@
   min-width:  100%;
   margin: 0 auto;
   margin-top: 2.5rem;
+  order: 1;
+  margin-bottom: 4rem;
 
-  @media screen and (min-width: $ds) {
-    min-width:  30%;
+  @media screen and (min-width: $lg) {
+    margin-bottom: 6rem;
+  }
+
+  @media screen and (min-width: $tb) {
+    min-width:  50%;
     margin: 0;
   }
 
@@ -65,7 +103,8 @@
       top: -2.5rem;
 
       &:nth-child(2) {
-        left: 20rem;
+        left: 18.6rem;
+        width: fit-content;
       }
     }
   }

@@ -1,25 +1,48 @@
 .main-header {
-  min-height: min-content;
+  min-height: 32rem;
   background-color: $black;
-  background-image: url('../image/content/main-bg-sm.jpg');
+  background-image: url('../image/content/main-bg-vsm.jpg');
   object-fit: contain;
   min-width: min-content;
-  background-position: top center;
+  background-position: top right;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto 100%;
+
+  @media screen and (min-width: $lg) {
+    background-image: url('../image/content/main-bg-sm.jpg');
+  }
+
+  @media screen and (min-width: $tb) {
+    min-height: 55rem;
+  }
 
   @media screen and (min-width: $mdlg) {
     background-image: url('../image/content/main-bg.jpg');
-    min-height: inherit;
     background-color: $main;
+    background-position: right top;
+    min-height: inherit;
   }
 
-  &__date-wrapper {
-    margin-top: 10rem;
+  @media screen and (min-width: $hd) {
+    background-image: url('../image/content/main-bg.jpg');
+    background-size: contain;
+    min-height: inherit;
+  }
+
+  &__date {
+    margin-top: 17rem;
     margin-left: 2rem;
 
-    @media screen and (min-width: $mdlg) {
+    @media screen and (min-width: $lg) {
+      margin-top: 10rem;
+    }
+
+    @media screen and (min-width: $tb) {
       margin-top: 20rem;
+    }
+
+    @media screen and (min-width: $hd) {
+      margin-left: 20rem;
     }
   }
 
@@ -34,7 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 30rem;
+  width: 23rem;
 
   @media screen and (min-width: $lg) {
     width: 35rem;
@@ -47,8 +70,8 @@
 
   &__wrapper {
     background-color: $main;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     display: grid;
     align-items: center;
     justify-content: center;

@@ -5,12 +5,16 @@
   &__email-wrapper{
     position: relative;
     min-height: 4.4rem;
-    min-width: 46rem;
+    min-width: 20rem;
+
+    @media screen and (min-width: $tb) {
+      min-width: 46rem;
+    }
   }
 
   &__email{
     min-height: 4.4rem;
-    min-width: 46rem;
+    min-width: 20rem;
     border: none;
     border-radius: 5rem 5rem 5rem 5rem;
     background: $bg-input-form;
@@ -18,15 +22,13 @@
     padding-right: 2rem;
     color: $white;
 
+    @media screen and (min-width: $tb) {
+      min-width: 46rem;
+    }
+
     &::placeholder {
       color: $white;
     }
   }
-
-  .btn-form {
-    position: absolute;
-    height: 4.4rem;
-    right: 0;
-    top: 0;
-  }
 }
+
