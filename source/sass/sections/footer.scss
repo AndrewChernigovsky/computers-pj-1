@@ -1,6 +1,6 @@
 .main-footer {
   &__wrapper {
-    min-height: 50rem;
+    min-height: 38rem;
     min-width: 100%;
     display: flex;
     flex-direction: column;
@@ -28,10 +28,12 @@
 .social {
   min-width: 32rem;
   margin-bottom: 4rem;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    padding: 0 2rem;
   }
   &__link{
     background-color: pink;

@@ -1,5 +1,9 @@
 .speakers {
-  margin-bottom: 16rem;
+  margin-bottom: 0;
+
+  @media screen and (min-width: $tb) {
+    margin-bottom: 16rem;
+  }
   &__wrapper {
   }
 
@@ -15,6 +19,8 @@
       margin-right: 4rem;
       width: 3.6rem;
       height: 3.6rem;
+      margin-left: 1rem;
+
       @media screen and (min-width: $tb) {
         width: 9.6rem;
         height: 9.6rem;

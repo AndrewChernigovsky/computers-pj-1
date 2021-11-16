@@ -1,5 +1,4 @@
 .parthners {
-  display: none;
   &__wrapper {
     margin-bottom: 6rem;
   }
@@ -10,22 +9,69 @@
     margin-bottom: 6rem;
 
     picture img{
-      width: 9.6rem;
-      height: 9.6rem;
+      width: 3.6rem;
+      height: 3.6rem;
       flex: none;
       transform: rotate(180deg);
       margin-right: 4rem;
+
+      @media screen and (min-width: $tb) {
+        width: 9.6rem;
+        height: 9.6rem;
+      }
     }
   }
   &__logos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+
+    background: linear-gradient(
+      45deg,white, transparent 1px), linear-gradient(
+      90deg, white, transparent 1px);
+    background-size: 32.5rem 10.1rem;
+    background: linear-gradient(#fff,transparent 1px),linear-gradient(
+      90deg,#fff,transparent 1px);
+    background-size: 18.5rem 7.9rem;
+    background-position: 32.4rem 14.5rem;
+
+    @media screen and (min-width: $md) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media screen and (min-width: $exlg) {
+      grid-template-columns: repeat(4,1fr);
+      justify-content: center;
+      background-size: 33.1rem 16.9rem;
+      background-position: 32.4rem 10.5rem;
+    }
   }
+
   &__logo {
     width: min-content;
     min-width: 25%;
-    margin-bottom: 2rem;
     justify-self: center;
+
+    @media screen and (min-width: $ds) {
+        width: 20rem;
+        height: 10rem;
+    }
+
+    picture img{
+      width: 10rem;
+      height: 7rem;
+      flex: none;
+      object-fit: contain;
+
+      @media screen and (min-width: $lg) {
+        width: 15rem;
+        height: 10rem;
+      }
+
+      @media screen and (min-width: $ds) {
+        width: 20rem;
+        height: 10rem;
+      }
+    }
   }
 }

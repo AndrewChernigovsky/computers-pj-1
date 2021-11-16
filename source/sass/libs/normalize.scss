@@ -12,10 +12,10 @@
   min-width: 28rem;
   min-height: 100%;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 
-  @media screen and (min-width: $sm) {
-    padding: 0 1rem;
+  @media screen and (min-width: $tb) {
+    padding: 0 2rem;
   }
 
   @media screen and (min-width: $exlg) {
