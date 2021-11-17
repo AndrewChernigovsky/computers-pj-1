@@ -87,8 +87,16 @@
 }
 
 .f-sr {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 400;
+
+  @media screen and (min-width: $lg) {
+    font-size: 1.4rem;
+  }
+
+  @media screen and (min-width: $tb) {
+    font-size: 1.8rem;
+  }
 }
 
 .f-srs {

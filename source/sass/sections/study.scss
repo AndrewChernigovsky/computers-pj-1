@@ -1,7 +1,14 @@
 .study{
-  display: none;
   &__wrapper {
-    margin-bottom: 15rem;
+    margin-bottom: 4rem;
+
+    @media screen and (min-width: $lg) {
+      margin-bottom: 10rem;
+    }
+
+    @media screen and (min-width: $tb) {
+      margin-bottom: 15rem;
+    }
   }
 
   &__head {
@@ -9,31 +16,53 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 7.6rem;
+    margin-bottom: 2.6rem;
 
-    picture {
+    @media screen and (min-width: $tb) {
       margin-bottom: 7.6rem;
     }
 
+    picture {
+      margin-bottom: 1.6rem;
+
+      @media screen and (min-width: $tb) {
+        margin-bottom: 7.6rem;
+      }
+    }
+
     picture img{
-      width: 9.6rem;
-      height: 9.6rem;
+      width: 3.6rem;
+      height: 3.6rem;
       flex: none;
       transform: rotate(136deg);
+
+      @media screen and (min-width: $tb) {
+        width: 9.6rem;
+        height: 9.6rem;
+      }
     }
 
     p {
       width: min-content;
-      min-width: 36rem;
+      min-width: 30rem;
       text-align: center;
     }
   }
 
   &__body {
     display: grid;
-    grid-template-columns: 25rem 12rem 25rem;
+    grid-template-columns: 10rem 6rem 10rem;
     min-height: 55rem;
     justify-content: center;
+
+    @media screen and (min-width: $lg) {
+      grid-template-columns: 20rem 10rem 20rem;
+    }
+
+    @media screen and (min-width: $tb) {
+      grid-template-columns: 25rem 12rem 25rem;
+    }
+
   }
 
   &__week-block {
@@ -47,11 +76,22 @@
         &::after {
           content: '';
           position: absolute;
-          width: 4rem;
+          width: 2rem;
           background-color: gray;
           height: 0.1rem;
           top: 5.1rem;
-          right: -5.7rem;
+          right: -3rem;
+
+          @media screen and (min-width: $lg) {
+            width: 4rem;
+            right: -4.7rem;
+            top: 4.1rem;
+          }
+
+          @media screen and (min-width: $tb) {
+            right: -5.7rem;
+          }
+
         }
       }
     }
@@ -60,11 +100,21 @@
         &::before {
           content: '';
           position: absolute;
-          width: 4rem;
+          width: 2rem;
           background-color: gray;
           height: 0.1rem;
-          left: -5.6rem;
-          top: 5.5rem;
+          left: -3rem;
+          top: 4.5rem;
+
+
+          @media screen and (min-width: $lg) {
+            left: -4.8rem;
+            width: 4rem;
+          }
+
+          @media screen and (min-width: $tb) {
+            left: -5.6rem;
+          }
         }
       }
     }

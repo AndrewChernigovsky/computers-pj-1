@@ -25,6 +25,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     position: relative;
+    justify-content: center;
 
     background: linear-gradient(
       45deg,white, transparent 1px), linear-gradient(
@@ -32,18 +33,29 @@
     background-size: 32.5rem 10.1rem;
     background: linear-gradient(#fff,transparent 1px),linear-gradient(
       90deg,#fff,transparent 1px);
-    background-size: 18.5rem 7.9rem;
-    background-position: 32.4rem 14.5rem;
+    background-size: 54% 12.9rem;
+    background-position: 92vw 19rem;
+    gap: 4rem;
 
     @media screen and (min-width: $md) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      background-size: 34% 12rem;
+      background-position: 51% 32rem;
     }
 
-    @media screen and (min-width: $exlg) {
-      grid-template-columns: repeat(4,1fr);
-      justify-content: center;
-      background-size: 33.1rem 16.9rem;
-      background-position: 32.4rem 10.5rem;
+    @media screen and (min-width: $lg) {
+      background-size: 34% 15.9rem;
+      background-position: 51% 42.5rem;
+    }
+
+    @media screen and (min-width: $tb) {
+      grid-template-columns: repeat(4, 1fr);
+      background-size: 26% 17.9rem;
+      background-position: 32% 48.5rem;
+      gap: 6rem;
+    }
+
+    @media screen and (min-width: $ds) {
     }
   }
 
