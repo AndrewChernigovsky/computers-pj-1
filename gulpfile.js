@@ -9,6 +9,7 @@ sass = require('gulp-sass')(require('sass')),
 uglify = require('gulp-uglify'),
 babel = require('gulp-babel'),
 htmlmin = require('gulp-htmlmin'),
+imagemin = require('gulp-imagemin'),
 rename = require("gulp-rename"),
 webp = require("gulp-webp"),
 svgstore = require("gulp-svgstore"),
@@ -57,9 +58,7 @@ function html() {
     .pipe(sync.stream())
 }
 
-
 function scss2css() {
-
   return src('source/sass/styles.scss')
     .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))
     .pipe(sourcemaps.init())
@@ -74,7 +73,7 @@ function scss2css() {
 }
 
 function script() {
-  return src(["source/js/**/*.js","!source/js/libs/jquery-3.6.0.min.js"])
+  return src(["source/js/**/*.js","!source/js/libs/**/*.js"])
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: [['@babel/env', {"modules": false}]]
@@ -87,22 +86,28 @@ function script() {
     .pipe(sync.stream());
 }
 
-function copyJquery() {
-  return src(['source/js/libs/jquery-3.6.0.min.js'])
-  .pipe(dest('production/js/libs/'))
+function minReact() {
+  return src(['source/js/libs/React/*.js', '!source/js/libs/React/babel.js','!source/js/libs/React/reactDOM.js'])
+    .pipe(uglify())
+    .pipe(dest('source/js/libs/React/'))
 }
 
-function libs() {
-  return src(['source/js/libs/swiper-bundle.min.js'])
-    .pipe(concat('libs.js'))
-    .pipe(dest('production/js/libs/'))
-  }
+function copyReact() {
+ return src(['source/js/libs/React/*.js'])
+    .pipe(concat('react-main.js'))
+    .pipe(dest('production/js/libs/React/'))
+}
 
-function imageMin() {
+function copyJquery() {
+  return src(['source/js/libs/Jquery/jquery-3.6.0.min.js'])
+  .pipe(dest('production/js/libs/Jquery'))
+}
+
+function imageMin () {
   return src("source/image/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.optipng({optimizationLevel: 6}),
       imagemin.svgo()
     ]))
     .pipe(dest("production/image"))
@@ -132,7 +137,7 @@ function copy (done){
 
 function createWebp() {
   return src("source/image/**/*.{jpg,png}")
-    .pipe(webp({quality: 90}))
+    .pipe(webp({quality: 85}))
     .pipe(dest("production/image"))
     .pipe(sync.stream())
   }
@@ -174,11 +179,6 @@ function watcher(){
 
 exports.default = series(
   clean,
-  copy,
-  copyImages,
-  fontW,
-  fontW2,
-  copyFonts,
 
   parallel(
     pug2html,
@@ -186,8 +186,7 @@ exports.default = series(
     scss2css,
     script,
     sprite,
-    createWebp,
-    copyJquery,
+    createWebp
   ),
 
   series(
@@ -199,7 +198,14 @@ exports.default = series(
 exports.build = series(
   clean,
   copy,
+  copyImages,
   imageMin,
+  fontW,
+  fontW2,
+  copyFonts,
+  copyJquery,
+  minReact,
+  copyReact,
 
   parallel(
     pug2html,
