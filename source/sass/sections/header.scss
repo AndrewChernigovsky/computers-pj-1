@@ -104,3 +104,21 @@
     }
   }
 }
+
+#sign {
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 0.4rem;
+  left: 2.4rem;
+  border-radius: 50%;
+  object-fit: cover;
+
+  @media screen and (min-width: $tb) {
+    display: block;
+  }
+}

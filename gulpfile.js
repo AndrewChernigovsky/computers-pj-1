@@ -73,7 +73,7 @@ function scss2css() {
 }
 
 function script() {
-  return src(["source/js/**/*.js","!source/js/libs/**/*.js"])
+  return src(["source/js/**/*.js","!source/js/libs/**/*.js", "!source/js/components/react/**/*.js"])
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: [['@babel/env', {"modules": false}]]
@@ -86,16 +86,11 @@ function script() {
     .pipe(sync.stream());
 }
 
-function minReact() {
-  return src(['source/js/libs/React/*.js', '!source/js/libs/React/babel.js','!source/js/libs/React/reactDOM.js'])
-    .pipe(uglify())
-    .pipe(dest('source/js/libs/React/'))
-}
 
-function copyReact() {
- return src(['source/js/libs/React/*.js'])
-    .pipe(concat('react-main.js'))
-    .pipe(dest('production/js/libs/React/'))
+function scriptReact() {
+  return src("source/js/components/react/login-profile/profile.js")
+    .pipe(dest('production/js/'))
+    .pipe(sync.stream())
 }
 
 function copyJquery() {
@@ -172,13 +167,21 @@ function reload (done){
 function watcher(){
   watch("source/pug/**/*.pug", series(pug2html, reload));
   watch("source/sass/**/*.scss", series(scss2css, reload));
-  watch("source/js/**/*.js", series(script, reload));
+  watch("source/js/**/*.js", "!source/js/components/react/**/*.js", series(script, reload));
+  watch("source/js/components/react/login-profile/profile.js", series(scriptReact, reload));
   watch("source/*.html", series(html, reload));
   watch("source/image/**/*.{jpg,png,svg,ico}", series(copyImages, reload));
 }
 
 exports.default = series(
   clean,
+  copy,
+  copyImages,
+  fontW,
+  fontW2,
+  copyFonts,
+  copyJquery,
+  scriptReact,
 
   parallel(
     pug2html,
@@ -204,8 +207,6 @@ exports.build = series(
   fontW2,
   copyFonts,
   copyJquery,
-  minReact,
-  copyReact,
 
   parallel(
     pug2html,
