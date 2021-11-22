@@ -31,7 +31,6 @@
   "homepage": "https://github.com/AndrewChernigovsky/gulp-test#readme",
   "dependencies": {
     "autoprefixer": "^10.3.7",
-    "babel-preset-react-app": "^3.1.2",
     "csso": "^4.2.0",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
@@ -43,7 +42,6 @@
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
-    "@babel/preset-react": "^7.16.0",
     "@htmlacademy/editorconfig-cli": "^1.0.0",
     "babel-cli": "^6.26.0",
     "browser-sync": "^2.27.5",

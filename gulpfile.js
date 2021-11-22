@@ -73,7 +73,7 @@ function scss2css() {
 }
 
 function script() {
-  return src(["source/js/**/*.js","!source/js/libs/**/*.js", "!source/js/components/react/**/*.js"])
+  return src(["source/js/**/*.js","!source/js/libs/**/*.js"])
     .pipe(sourcemaps.init())
     .pipe(babel({
       presets: [['@babel/env', {"modules": false}]]
@@ -84,13 +84,6 @@ function script() {
     .pipe(rename('main.min.js'))
     .pipe(dest('production/js/'))
     .pipe(sync.stream());
-}
-
-
-function scriptReact() {
-  return src("source/js/components/react/login-profile/profile.js")
-    .pipe(dest('production/js/'))
-    .pipe(sync.stream())
 }
 
 function copyJquery() {
@@ -167,8 +160,7 @@ function reload (done){
 function watcher(){
   watch("source/pug/**/*.pug", series(pug2html, reload));
   watch("source/sass/**/*.scss", series(scss2css, reload));
-  watch("source/js/**/*.js", "!source/js/components/react/**/*.js", series(script, reload));
-  watch("source/js/components/react/login-profile/profile.js", series(scriptReact, reload));
+  watch("source/js/**/*.js", series(script, reload));
   watch("source/*.html", series(html, reload));
   watch("source/image/**/*.{jpg,png,svg,ico}", series(copyImages, reload));
 }
@@ -181,7 +173,6 @@ exports.default = series(
   fontW2,
   copyFonts,
   copyJquery,
-  scriptReact,
 
   parallel(
     pug2html,
