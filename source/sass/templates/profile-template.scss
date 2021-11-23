@@ -1,9 +1,29 @@
 .profile {
-  width: 50rem;
-  height: 50rem;
-  background-color: $black;
+  width: 100%;
+  height: 100vh;
   position: fixed;
-  top: 5rem;
-  left: 35%;
+  top: 0;
+  left: 0;
   z-index: 8;
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 20rem;
+    height: 30rem;
+    position: relative;
+    opacity: 1;
+    background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+
+  }
+
+}
+
+.sign-up {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
 }

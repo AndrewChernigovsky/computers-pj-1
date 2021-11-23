@@ -1,6 +1,6 @@
 const burger = document.querySelector('.menu__burger-btn');
 const nav = document.querySelector('.menu__nav');
-const jsOverlay = document.querySelector('.js-overlay-burger');
+const jsOverlay = document.querySelector('.js-overlay-bg');
 const btnSign = document.querySelector('.burger-sign');
 const logo = document.querySelector('.logo-m');
 

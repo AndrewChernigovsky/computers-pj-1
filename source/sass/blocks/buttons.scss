@@ -42,6 +42,47 @@
   }
 }
 
+.btn-closeSign {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+
+  &::after, &::before{
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: $white;
+    right: 0rem;
+    top: 1.4rem;
+    height: 0.2rem;
+    width: 3rem;
+  }
+
+  &::before{
+    transform: rotate(45deg);
+  }
+
+  &::after{
+    transform: rotate(-45deg);
+  }
+}
+
+@media screen and (min-width: $tb) {
+  .btn-closeSign:hover::before{
+    transition: 0.3s ease-in-out;
+    transform: rotate(-45deg);
+  }
+
+  .btn-closeSign:hover::after{
+    transition: 0.3s ease-in-out;
+    transform: rotate(45deg);
+  }
+}
+
 // main-seller
 
 .btn-success {

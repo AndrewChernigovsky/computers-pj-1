@@ -48,3 +48,15 @@ body {
 .js-active {
   display: block;
 }
+
+.js-overlay-bg {
+  display: none;
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 100;
+  opacity: 0.9;
+  background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+  top: 0;
+  left: 0;
+}
