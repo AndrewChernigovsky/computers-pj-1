@@ -3,11 +3,25 @@ template(id="sign-entrance")
   .profile
     .profile__wrapper
       .profile__buttons
-        button(type="button" id="signIn") Войти
-        button(type="button" id="signUp") Зарегистрироваться
-        .sign-up
-          .sign-up__wrapper
-            .sign-up__heading Войти как
-            .sign-up__body
-              .sign-up__google
+        button(type="button" id="signIn").btn-secondary Войти
+        button(type="button" id="signUp").btn-secondary  Зарегистрироваться
+      .sign-up
+        .sign-up__wrapper
+          .sign-up__heading Войти как
+          .sign-up__body
+            button(type="button" id="signInGoogle").btn-secondary.btn-socialSign
+              svg(fill="white")
+                use(xlink:href="image/sprite.svg#Google")
+            button(type="button" id="signInFace").btn-secondary.btn-socialSign
+              svg(fill="white")
+                use(xlink:href="image/sprite.svg#facebook")
+            button(type="button" id="signInVk").btn-secondary.btn-socialSign
+              img(role="svg" fill="white" src="image/icons/vk.svg")
+            button(type="button" id="signInInsta").btn-secondary.btn-socialSign
+              svg(fill="white")
+                use(xlink:href="image/sprite.svg#instagram")
+
       button(type="button").btn-closeSign
+      .sign-helpers
+        .sign-helpers__password Забыил пароль?
+        .sign-helpers__login Забыли логин?
