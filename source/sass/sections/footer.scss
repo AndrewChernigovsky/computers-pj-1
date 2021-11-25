@@ -37,7 +37,7 @@
   }
   &__link{
     background-color: pink;
-    border: none;
+    border: 0 solid transparent;
     border-radius: 50%;
     background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
     width: 5rem;

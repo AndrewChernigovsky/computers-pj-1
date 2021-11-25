@@ -1,0 +1,43 @@
+.profiles#sign-entrance
+  .js-overlay-bg
+  .profile
+    .profile__wrapper
+      .profile__buttons
+        button(type="button" id="signIn").btn-secondary Войти
+        button(type="button" id="signUp").btn-secondary  Зарегистрироваться
+      .sign-up
+        .sign-up__wrapper
+          .sign-up__heading Войти через:
+          .sign-up__body
+            .social
+              .social__wrapper
+                button(type="button").btn.btn-secondary.social__link
+                  svg(fill="white")
+                    use(xlink:href="image/sprite.svg#vk")
+                button(type="button").btn.btn-secondary.btn-social.social__link
+                  svg(fill="white")
+                    use(xlink:href="image/sprite.svg#facebook")
+                button(type="button").btn.btn-secondary.btn-social.social__link
+                  svg(fill="white")
+                    use(xlink:href="image/sprite.svg#instagram")
+                button(type="button").btn.btn-secondary.btn-social.social__link
+                  svg(fill="white")
+                    use(xlink:href="image/sprite.svg#youtube")
+
+      button(type="button" id="signExit").btn-closeSign
+      .login-form#login
+        form(action='' method='' id='login-form')
+          fieldset.login-wrappers
+            label(id='email') Введите email
+            input(type="email" placeholder='E-mail' name='email' for='email')
+            label(id='password') Введите пароль
+            input(type="password" placeholder='Password' name='password' for='password')
+            button(type='sumbit') Войти
+        .sign-helpers
+          .sign-helpers__password
+            button(type="button" id="HelpPassword").btn-secondary.btnbg Забыли пароль?
+          .sign-helpers__login
+            button(type="button" id="HelpLogin").btn-secondary.btnbg Забыли логин?
+        button(type="button" id="signBack").btn-back Back
+
+

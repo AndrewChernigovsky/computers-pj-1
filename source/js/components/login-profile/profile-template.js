@@ -1,27 +1,40 @@
 const buttonSign = document.getElementById('sign');
 const buttonSignBurger = document.getElementById('sign-burger');
 const signEntrance = document.getElementById('sign-entrance');
-const jsOverlay = document.querySelector('.js-overlay-bg');
+const signExit = document.getElementById('signExit');
 
-let el = document.createElement('div');
-el.setAttribute('id','signIntro');
+const buttonSignIn = document.getElementById('signIn');
+const signInPopup = document.getElementById('login');
 
+const signBack = document.getElementById('signBack');
 
 function buttonSignOpen() {
-  el.append(signEntrance.content.cloneNode(true))
-  document.body.appendChild(el);
-  el.children[0].style.display = "block";
+  signEntrance.style.display = "block"
+  signEntrance.children[0].style.display = "block";
 };
 
 function buttonSignClose() {
-  el.remove()
-    while (this.firstChild) {this.removeChild(this.firstChild);}
-    return this;
-
-    el.children[0].style.display = "none";
+  signEntrance.style.display = "none"
+  signEntrance.children[0].style.display = "none";
 };
 
-buttonSign.addEventListener("click", buttonSignOpen)
-buttonSignBurger.addEventListener("click", buttonSignOpen)
+function buttonSignInOpen() {
+  signEntrance.style.display = "none"
+  signEntrance.children[0].style.display = "none";
+  signInPopup.style.display = "none";
+};
 
-el.addEventListener("click", buttonSignClose);
+function signInPopupOpen() {
+  signInPopup.style.display = "block";
+}
+
+function signInPopupClose() {
+  signInPopup.style.display = "none";
+}
+
+buttonSign.addEventListener("click", buttonSignOpen);
+buttonSignBurger.addEventListener("click", buttonSignOpen);
+buttonSignIn.addEventListener("click", signInPopupOpen);
+
+signExit.addEventListener("click", buttonSignClose);
+signBack.addEventListener("click", signInPopupClose);

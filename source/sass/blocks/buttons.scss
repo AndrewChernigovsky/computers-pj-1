@@ -22,7 +22,6 @@
 .btn-secondary {
   background-color: $btn-secondary2;
   background: linear-gradient(to bottom right, $btn-primary1, $btn-secondary2);
-  min-width: 15rem;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -201,3 +200,8 @@
 
 
 // animation
+
+
+.btnbg {
+  background: transparent;
+}

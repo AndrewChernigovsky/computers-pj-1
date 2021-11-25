@@ -1,0 +1,14 @@
+#login {
+  position: absolute;
+  z-index: 115;
+  width: 52rem;
+  height: 30rem;
+  top: 7.7rem;
+  background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+}
+
+.login-wrappers {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
