@@ -1,52 +1,72 @@
 .profiles#sign-entrance
-  .js-overlay-bg
-  .profile
-    .profile__wrapper
-      .profile__buttons
-        button(type="button" id="signIn").btn-secondary Войти
-        button(type="button" id="signUp").btn-secondary  Зарегистрироваться
-      .sign-up
-        .sign-up__wrapper
-          .sign-up__heading Войти через:
-          .sign-up__body
-            .social
-              .social__wrapper
-                button(type="button").btn.btn-secondary.social__link
-                  svg(fill="white")
-                    use(xlink:href="image/sprite.svg#vk")
-                button(type="button").btn.btn-secondary.btn-social.social__link
-                  svg(fill="white")
-                    use(xlink:href="image/sprite.svg#facebook")
-                button(type="button").btn.btn-secondary.btn-social.social__link
-                  svg(fill="white")
-                    use(xlink:href="image/sprite.svg#instagram")
-                button(type="button").btn.btn-secondary.btn-social.social__link
-                  svg(fill="white")
-                    use(xlink:href="image/sprite.svg#youtube")
+    .js-overlay-bg
+    .profile
+        .profile__wrapper
+            .profile__buttons
+                button(type="button" id="signIn").btn-secondary Войти
+                button(type="button" id="signUp").btn-secondary  Зарегистрироваться
+            .sign-up
+                .sign-up__wrapper
+                    .sign-up__heading Войти через:
+                    .sign-up__body
+                        .social
+                            .social__wrapper
+                                button(type="button").btn.btn-secondary.social__link
+                                    svg(fill="white")
+                                        use(xlink:href="image/sprite.svg#vk")
+                                button(type="button").btn.btn-secondary.btn-social.social__link
+                                    svg(fill="white")
+                                        use(xlink:href="image/sprite.svg#facebook")
+                                button(type="button").btn.btn-secondary.btn-social.social__link
+                                    svg(fill="white")
+                                        use(xlink:href="image/sprite.svg#instagram")
+                                button(type="button").btn.btn-secondary.btn-social.social__link
+                                    svg(fill="white")
+                                        use(xlink:href="image/sprite.svg#youtube")
 
-      button(type="button" id="signExit").btn-closeSign
-      .login-form#login
-        form(action='' method='' id='login-form')
-          fieldset.login-wrappers
-            .email-wrapper
-              label(for='email') Введите email
-              input(type="email" placeholder='E-mail' name='email' id='email')
-            .password-wrapper
-              label(for='password') Введите пароль
-              input(type='password' placeholder='Password' name='password' id='password')
-              button(type="button").btn-password#viewPassword
-                svg(fill="white" id="showPassword")
-                    use(xlink:href="image/sprite.svg#passwordEyeOpen")
-                svg(fill="white" id="closePassword")
-                    use(xlink:href="image/sprite.svg#passwordEyeClosed")
-            button(type='sumbit').btn-secondary Войти
-        .sign-helpers
-          .sign-helpers__password
-            button(type="button" id="HelpPassword").btn-secondary.btnbg Забыли пароль?
-          .sign-helpers__login
-            button(type="button" id="HelpLogin").btn-secondary.btnbg Забыли логин?
-        button(type="button" id="signBack").btn-back
-          svg(fill="white")
-                    use(xlink:href="image/sprite.svg#btnBack")
+            button(type="button" id="signExit").btn-closeSign
+            .login-form#login
+                form(action='' method='' id='login-form')
+                    fieldset.login-wrappers
+                        .email-wrapper
+                            label(for='email') Введите email
+                            input(type="email" placeholder='E-mail' name='email' id='email')
+                        .password-wrapper
+                            label(for='password') Введите пароль
+                            input(type='password' placeholder='Password' name='password' id='password')
+                            button(type="button").btn-password#viewPassword
+                                svg(fill="white" id="showPassword")
+                                    use(xlink:href="image/sprite.svg#passwordEyeOpen")
+                                svg(fill="white" id="closePassword")
+                                    use(xlink:href="image/sprite.svg#passwordEyeClosed")
+                        button(type='sumbit').btn-secondary Войти
+                .sign-helpers
+                    .sign-helpers__password
+                        button(type="button" id="HelpPassword").btn-secondary.btnbg Забыли пароль?
+                    .sign-helpers__login
+                        button(type="button" id="HelpLogin").btn-secondary.btnbg Забыли логин?
+                button(type="button" id="signBack").btn-back
+                    svg(fill="white")
+                        use(xlink:href="image/sprite.svg#btnBack")
+
+             .register-form#register
+                form(action='' method='' id='login-form')
+                    fieldset.register-wrappers
+                        .email-wrapper
+                            label(for='email') Введите email
+                            input(type="email" placeholder='E-mail' name='email' id='email')
+                        .password-wrapper
+                            label(for='password') Введите пароль
+                            input(type='password' placeholder='Password' name='password' id='password')
+                            button(type="button").btn-password#viewPassword
+                                svg(fill="white" id="showPassword")
+                                    use(xlink:href="image/sprite.svg#passwordEyeOpen")
+                                svg(fill="white" id="closePassword")
+                                    use(xlink:href="image/sprite.svg#passwordEyeClosed")
+                        button(type='sumbit').btn-secondary Войти
+                button(type="button" id="signBack").btn-back
+                    svg(fill="white")
+                        use(xlink:href="image/sprite.svg#btnBack")
+
 
 
