@@ -1,5 +1,6 @@
 #login {
   position: absolute;
+  display: none;
   z-index: 115;
   width: 52rem;
   height: 30rem;
@@ -11,4 +12,73 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  border:none;
+
+  input:nth-child(2), input:nth-child(4){
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem 1rem;
+    min-width: 30rem;
+  }
+
+  label{
+    margin-bottom: 0.5rem;
+  }
+}
+
+#login-form{
+  width: 32rem;
+  height: 16rem;
+  margin: 0 auto;
+}
+.email-wrapper{
+
+}
+
+.password-wrapper{
+ position: relative;
+}
+
+#viewPassword{
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  right: 0.8rem;
+  top: 2.7rem;
+  background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+  border-radius: 50%;
+
+  svg {
+    width: 25px;
+    height: 25px;
+    padding-left: 2px;
+    flex: none;
+    object-fit: cover;
+  }
+}
+
+#showPassword {
+  display: block;
+}
+
+#closePassword {
+  display: none;
+}
+
+#signBack{
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  left: 1rem;
+  top: 1rem;
+  top: 2.7rem;
+  background: transparent;
+
+  svg {
+    width: 25px;
+    height: 25px;
+    padding-left: 2px;
+    flex: none;
+    object-fit: cover;
+  }
 }

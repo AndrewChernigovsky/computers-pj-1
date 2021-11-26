@@ -38,3 +38,24 @@ buttonSignIn.addEventListener("click", signInPopupOpen);
 
 signExit.addEventListener("click", buttonSignClose);
 signBack.addEventListener("click", signInPopupClose);
+
+// login
+
+const password = document.getElementById('password');
+const btnPassword = document.getElementById('viewPassword');
+const btnPasswordOpen = document.getElementById('showPassword');
+const btnPasswordClosed = document.getElementById('closePassword');
+
+const showPassword = () => {
+  if(password.type === "password"){
+      password.type="text"
+      btnPasswordOpen.style.display="none";
+      btnPasswordClosed.style.display="block";
+  } else if (password.type === "text"){
+      password.type="password"
+      btnPasswordOpen.style.display="block";
+      btnPasswordClosed.style.display="none";
+  };
+}
+
+btnPassword.addEventListener('click', showPassword);
