@@ -28,16 +28,25 @@
       .login-form#login
         form(action='' method='' id='login-form')
           fieldset.login-wrappers
-            label(id='email') Введите email
-            input(type="email" placeholder='E-mail' name='email' for='email')
-            label(id='password') Введите пароль
-            input(type="password" placeholder='Password' name='password' for='password')
-            button(type='sumbit') Войти
+            .email-wrapper
+              label(for='email') Введите email
+              input(type="email" placeholder='E-mail' name='email' id='email')
+            .password-wrapper
+              label(for='password') Введите пароль
+              input(type='password' placeholder='Password' name='password' id='password')
+              button(type="button").btn-password#viewPassword
+                svg(fill="white" id="showPassword")
+                    use(xlink:href="image/sprite.svg#passwordEyeOpen")
+                svg(fill="white" id="closePassword")
+                    use(xlink:href="image/sprite.svg#passwordEyeClosed")
+            button(type='sumbit').btn-secondary Войти
         .sign-helpers
           .sign-helpers__password
             button(type="button" id="HelpPassword").btn-secondary.btnbg Забыли пароль?
           .sign-helpers__login
             button(type="button" id="HelpLogin").btn-secondary.btnbg Забыли логин?
-        button(type="button" id="signBack").btn-back Back
+        button(type="button" id="signBack").btn-back
+          svg(fill="white")
+                    use(xlink:href="image/sprite.svg#btnBack")
 
 
