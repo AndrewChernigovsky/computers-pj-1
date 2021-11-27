@@ -7,6 +7,7 @@ const buttonSignIn = document.getElementById('signIn');
 const signInPopup = document.getElementById('login');
 
 const signBack = document.getElementById('signBack');
+const signBackRegister = document.getElementById('signBackRegister');
 
 function buttonSignOpen() {
   signEntrance.style.display = "block"
@@ -59,3 +60,23 @@ const showPassword = () => {
 }
 
 btnPassword.addEventListener('click', showPassword);
+
+// register
+
+const btnShowRegister = document.getElementById('signUp');
+const popupRegister = document.getElementById('register');
+
+function signUpPopupOpen() {
+    if(popupRegister.style.display = "none"){
+        popupRegister.style.display = "block";
+    } else {
+        popupRegister.style.display = "none";
+    }
+};
+
+function signUpPopupClose() {
+    popupRegister.style.display = "none";
+};
+
+btnShowRegister.addEventListener('click', signUpPopupOpen);
+signBackRegister.addEventListener('click', signUpPopupClose);

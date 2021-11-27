@@ -45,26 +45,33 @@
                         button(type="button" id="HelpPassword").btn-secondary.btnbg Забыли пароль?
                     .sign-helpers__login
                         button(type="button" id="HelpLogin").btn-secondary.btnbg Забыли логин?
-                button(type="button" id="signBack").btn-back
+                button(type="button").btn-back#signBack
                     svg(fill="white")
                         use(xlink:href="image/sprite.svg#btnBack")
 
-             .register-form#register
+            .register-form#register
                 form(action='' method='' id='login-form')
                     fieldset.register-wrappers
+                        .avatar-wrapper
+                            label(for="avatar") Загрузите вашу фотографию
+                            input(type="file" id="avatar")
+                            svg(fill="white")
+                                use(xlink:href="image/sprite.svg#avatar")
                         .email-wrapper
-                            label(for='email') Введите email
+                            label(for='email') Ваш email
                             input(type="email" placeholder='E-mail' name='email' id='email')
                         .password-wrapper
-                            label(for='password') Введите пароль
-                            input(type='password' placeholder='Password' name='password' id='password')
-                            button(type="button").btn-password#viewPassword
-                                svg(fill="white" id="showPassword")
+                            label(for='registerPassword') Введите пароль
+                            input(type='password' placeholder='Password' name='registerPassword' id='registerPassword')
+                            label(for='registerPasswordRepeat') Повторите пароль
+                            input(type='password' placeholder='Repeat Password' name='registerPasswordRepeat' id='registerPasswordRepeat')
+                            button(type="button").btn-password#viewRegisterPassword
+                                svg(fill="white" id="showRegisterPassword")
                                     use(xlink:href="image/sprite.svg#passwordEyeOpen")
-                                svg(fill="white" id="closePassword")
+                                svg(fill="white" id="closeRegisterPassword")
                                     use(xlink:href="image/sprite.svg#passwordEyeClosed")
-                        button(type='sumbit').btn-secondary Войти
-                button(type="button" id="signBack").btn-back
+                        button(type='sumbit').btn-secondary Зарегистрироваться
+                button(type="button").btn-back#signBackRegister
                     svg(fill="white")
                         use(xlink:href="image/sprite.svg#btnBack")
 
