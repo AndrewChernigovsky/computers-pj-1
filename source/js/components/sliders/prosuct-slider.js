@@ -4,29 +4,40 @@ const productsSliderWrapper = document.querySelector('.productsSlider__slide-wra
 // slide
 
 const productsSlide = document.querySelector('.productsSlider__slide');
-const productsSlidePrev = document.querySelector('.productsSlider__slide-prev');
-const productsSlideActive = document.querySelector('.productsSlider__slide-active');
-const productsSlideNext = document.querySelector('.productsSlider__slide-next');
-// buttons
-const buttonPrev = productsSlider.querySelector('.productsSlider__button-prev')
-const buttonNext = productsSlider.querySelector('.productsSlider__button-next')
+const buttonPrev = document.querySelector('.productsSlider__button-prev');
+const buttonNext = document.querySelector('.productsSlider__button-next');
 
-function sliderProducts(){
-    if(productsSliderWrapper.hasChildNodes()) {
-        var collectionslide = productsSliderWrapper.childNodes;
-        for (let i = 0; i < collectionslide.length;i++){
-            collectionslide[i]
-            console.log(collectionslide[i]);
+let IndexofSliderProducts = 1;
+showsSlidesProducts(IndexofSliderProducts);
 
-            if(collectionslide[0]){
-                
-            }
-        }
-    }
-
-    if(!productsSlide.classList.contains('.productsSlider__slide-prev')){
-
-    }
+function sliderProductsPrevious(){
+    showsSlidesProducts(IndexofSliderProducts -= 1);
 }
 
-buttonPrev.addEventListener('click', sliderProducts);
+function sliderProductsCurrent(n){
+    showsSlidesProducts(IndexofSliderProducts = n);
+}
+
+function sliderProductsNext(){
+    showsSlidesProducts(IndexofSliderProducts += 1);
+}
+
+function showsSlidesProducts(n){
+    let i;
+    let slides = document.getElementsByClassName("productsSlider__slide");
+    if ( n > slides.length){
+        IndexofSliderProducts = 1
+    }
+
+    if (n < 1) {
+        IndexofSliderProducts = slides.length
+    }
+
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = "none";
+    }
+    slides[IndexofSliderProducts - 1].style.display = "block";
+};
+
+buttonPrev.addEventListener('click', sliderProductsPrevious);
+buttonNext.addEventListener('click', sliderProductsNext);
