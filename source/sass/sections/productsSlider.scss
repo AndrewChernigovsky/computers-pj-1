@@ -1,0 +1,66 @@
+.productsSlider {
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    &__slider-wrapper{
+
+    }
+
+    &__slide-wrapper{
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 95rem;
+        height: 35rem;
+    }
+
+    &__slide{
+        transition: 0.3s ease-in-out;
+    }
+
+    &__slide-description{
+        flex-basis: 35rem;
+    }
+
+    &__img-wrapper{
+        width: 50rem;
+
+        img{
+            width: 50rem;
+            height: 30rem;
+            object-fit: contain;
+        }
+    }
+
+    &__button-prev, &__button-next{
+        width: 5rem;
+        height: 5rem;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        bottom: 0;
+        background-repeat: no-repeat;
+        background-size: 4rem;
+        opacity: 0.7;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    &__button-prev{
+        right: 50rem;
+        background-image: url(../image/icons/arrowBack.svg);
+        background-position: 0;
+    }
+
+    &__button-next{
+        left: 50rem;
+        background-image: url(../image/icons/arrowNext.svg);
+        background-position: 0.8rem;
+    }
+}

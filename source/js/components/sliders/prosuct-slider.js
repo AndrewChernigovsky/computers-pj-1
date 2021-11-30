@@ -35,8 +35,10 @@ function showsSlidesProducts(n){
 
     for (i = 0; i < slides.length; i++){
         slides[i].style.display = "none";
+        slides[i].style.opacity = "0";
     }
     slides[IndexofSliderProducts - 1].style.display = "block";
+    slides[IndexofSliderProducts - 1].style.opacity = "1";
 };
 
 buttonPrev.addEventListener('click', sliderProductsPrevious);
