@@ -1,4 +1,6 @@
 .productsSlider {
+    margin-bottom: 3rem;
+
     &__wrapper{
         display: flex;
         justify-content: center;
@@ -13,20 +15,45 @@
         display: flex;
         justify-content: center;
         position: relative;
-        width: 95rem;
-        height: 35rem;
+        width: 30rem;
+        height: 30rem;
+
+        @media screen and (min-width: $md) {
+            width: 35rem;
+        }
+
+        @media screen and (min-width: $lg) {
+            width: 50rem;
+            height: 35rem;
+        }
+
+        @media screen and (min-width: $tb) {
+            width: 72rem;
+            height: 50rem;
+        }
+
+        @media screen and (min-width: $ds) {
+            width: 98rem;
+            height: 65rem;
+        }
+
+        @media screen and (min-width: $exlg) {
+            width: 136rem;
+            height: 65rem;
+        }
     }
 
     &__slide{
-        animation-duration: 2s;
+        animation-duration: 1s;
         animation-name: slide;
     }
 
     &__slide-description{
-        flex-basis: 35rem;
+        flex-basis: 14rem;
         word-break: break-word;
         overflow: auto;
-        height: 30rem;
+        height: 25rem;
+        padding-right: 0.5rem;
 
         &::-webkit-scrollbar {
             width: 7px;
@@ -43,46 +70,148 @@
         &::-webkit-scrollbar-thumb {
             border-radius: 50%;
             background-color: $btn-primary1;
-          }
+        }
+
+        h2,p{
+            padding-right: 0.5rem;
+        }
+
+        @media screen and (min-width: $md) {
+            flex-basis: 14rem;
+        }
+
+        @media screen and (min-width: $lg) {
+            flex-basis: 25rem;
+        }
+
+        @media screen and (min-width: $tb) {
+            flex-basis: 35rem;
+            height: 30rem;
+        }
+
+        @media screen and (min-width: $ds) {
+            flex-basis: 50rem;
+        }
+
+        @media screen and (min-width: $exlg) {
+            flex-basis: 60rem;
+        }
+
     }
 
     &__img-wrapper{
-        width: 50rem;
+        width: 15rem;
 
         img{
-            width: 50rem;
+            width: 15rem;
             height: 30rem;
             object-fit: contain;
+
+            @media screen and (min-width: $md) {
+                width: 20rem;
+            }
+
+            @media screen and (min-width: $lg) {
+                width: 30rem;
+            }
+
+            @media screen and (min-width: $tb) {
+                width: 40rem;
+                height: 40rem;
+            }
+
+            @media screen and (min-width: $ds) {
+                width: 55rem;
+                height: 60rem;
+            }
+
+            @media screen and (min-width: $exlg) {
+                width: 60rem;
+            }
+        }
+
+        @media screen and (min-width: $md) {
+            width: 20rem;
+        }
+
+        @media screen and (min-width: $lg) {
+            width: 30rem;
+        }
+
+        @media screen and (min-width: $tb) {
+            width: 40rem;
+            height: 40rem;
+        }
+
+        @media screen and (min-width: $ds) {
+            width: 55rem;
+            height: 60rem;
+        }
+
+        @media screen and (min-width: $exlg) {
+            width: 60rem;
         }
     }
 
     &__button-prev, &__button-next{
-        width: 5rem;
-        height: 5rem;
-        background-color: white;
+        width: 2rem;
+        height: 2rem;
+        background-color: $white;
         border-radius: 50%;
         position: absolute;
         bottom: 0;
         background-repeat: no-repeat;
-        background-size: 4rem;
+        background-size: 1rem;
         opacity: 0.7;
         cursor: pointer;
 
         &:hover{
             opacity: 1;
         }
+
+        @media screen and (min-width: $tb) {
+            width: 5rem;
+            height: 5rem;
+            background-size: 4rem;
+          }
     }
 
     &__button-prev{
-        right: 50rem;
+        right: 20rem;
         background-image: url(../image/icons/arrowBack.svg);
-        background-position: 0;
+        background-position: 0.4rem;
+
+        @media screen and (min-width: $lg) {
+            right: 28rem;
+        }
+
+        @media screen and (min-width: $tb) {
+            right: 50rem;
+            background-position: 0;
+        }
+
+        @media screen and (min-width: $exlg) {
+            right: 70rem;
+        }
     }
 
     &__button-next{
-        left: 50rem;
+        left: 20rem;
         background-image: url(../image/icons/arrowNext.svg);
-        background-position: 0.8rem;
+        background-position: 0.6rem;
+
+        @media screen and (min-width: $lg) {
+            left: 28rem;
+        }
+
+        @media screen and (min-width: $tb) {
+            left: 50rem;
+            background-position: 0.8rem;
+        }
+
+        @media screen and (min-width: $exlg) {
+            left: 70rem;
+        }
     }
 }
 
