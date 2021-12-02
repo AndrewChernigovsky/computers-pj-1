@@ -2,10 +2,14 @@
   position: absolute;
   display: none;
   z-index: 115;
-  width: 52rem;
+  width: 30rem;
   height: 30rem;
   top: 7.7rem;
   background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
+
+  @media screen and (min-width: $lg) {
+    width: 45rem;
+  }
 }
 
 .login-wrappers {

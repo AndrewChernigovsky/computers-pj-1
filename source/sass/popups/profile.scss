@@ -18,7 +18,7 @@
     grid-template-columns: 80%;
     justify-content: space-around;
     align-self: center;
-    width: 50rem;
+    min-width: 30rem;
     padding: 4rem 1rem;
     height: 30rem;
     position: relative;
@@ -61,7 +61,7 @@
   &__wrapper {
     display: grid;
     gap: 2rem;
-    min-width: 100%;
+    min-width: inherit;
     margin-bottom: 2rem;
     margin-top: 2rem;
   }
