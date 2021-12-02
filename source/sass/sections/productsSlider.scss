@@ -90,6 +90,12 @@
             padding-right: 0.5rem;
         }
 
+        button{
+            background: transparent;
+            color: $white;
+            text-decoration: underline;
+        }
+
         @media screen and (min-width: $md) {
             flex-basis: 14rem;
         }

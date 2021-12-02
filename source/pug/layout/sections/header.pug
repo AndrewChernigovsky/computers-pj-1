@@ -14,17 +14,17 @@ header.main-header
       nav.main-nav
         ul.main-nav__list
           li.main-nav__item
-            a.main-nav__link.f-srg(href="index.html") Главная
+            a.main-nav__link.f-srg(href="#no__scroll") Главная
           li.main-nav__item
-            a.main-nav__link.f-srg(href="courses.html") Курсы
+            a.main-nav__link.f-srg(href="#courses") Курсы
           li.main-nav__item
-            a.main-nav__link.f-srg(href="dates.html") Расписание
+            a.main-nav__link.f-srg(href="#dates") Расписание
           li.main-nav__item
-            a.main-nav__link.f-srg(href="speakers.html") Преподаватели
+            a.main-nav__link.f-srg(href="#speakers") Преподаватели
           li.main-nav__item
-            a.main-nav__link.f-srg(href="emails.html") Рассылка
+            a.main-nav__link.f-srg(href="#emails") Рассылка
           li.main-nav__item
-            a.main-nav__link.f-srg(href="contacts.html") Контакты
+            a.main-nav__link.f-srg(href="#contacts") Контакты
 
       .sign
         button.btn.btn-sign(type="button" id="sign") Зайти в кабинет
@@ -50,22 +50,22 @@ header.main-header
                 ul.menu__list
                   li.menu__item
                     span.menu__text
-                      a(href="index.html").menu__link Главная
+                      a(href="#no__scroll").menu__link Главная
                   li.menu__item
                     span.menu__text
-                      a(href="courses.html").menu__link Курсы
+                      a(href="#courses").menu__link Курсы
                   li.menu__item
                     span.menu__text
-                      a(href="dates.html").menu__link Расписание
+                      a(href="#dates").menu__link Расписание
                   li.menu__item
                     span.menu__text
-                      a(href="speakers.html").menu__link Преподаватели
+                      a(href="#speakers").menu__link Преподаватели
                   li.menu__item
                     span.menu__text
-                      a(href="emails.html").menu__link Рассылка
+                      a(href="#emails").menu__link Рассылка
                   li.menu__item
                     span.menu__text
-                      a(href="contacts.html").menu__link Контакты
+                      a(href="#contacts").menu__link Контакты
             button.btn.btn-sign.burger-sign(type="button" id="sign-burger")
               svg(fill="white")
                 use(xlink:href="image/sprite.svg#user")
@@ -76,17 +76,17 @@ header.main-header
           | Первый курс
           br
           | по компьютерной сборке
-        .time-date
-          .time-date__wrapper
-            p.number.f-mb 12
-            p.f-srg Дней
-          .time-date__wrapper
-            p.number.f-mb 12
-            p.f-srg Часов
-          .time-date__wrapper
-            p.number.f-mb 12
-            p.f-srg Минут
-          .time-date__wrapper
-            p.number.f-mb 12
-            p.f-srg Секунд
+        .time-date#times
+            .time-date__wrapper
+                p.days.number.f-mb 12
+                p.f-srg Дней
+            .time-date__wrapper
+                p.hours.number.f-mb 12
+                p.f-srg Часов
+            .time-date__wrapper
+                p.minutes.number.f-mb 12
+                p.f-srg Минут
+            .time-date__wrapper
+                p.seconds.number.f-mb 12
+                p.f-srg Секунд
 
