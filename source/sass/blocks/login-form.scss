@@ -2,13 +2,14 @@
   position: absolute;
   display: none;
   z-index: 115;
-  width: 30rem;
+  width: 100%;
   height: 30rem;
-  top: 7.7rem;
+  top: 4.7rem;
+  padding-top: 4rem;
   background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
 
   @media screen and (min-width: $lg) {
-    width: 45rem;
+    top: 7.7rem;
   }
 }
 
@@ -17,23 +18,34 @@
   justify-content: center;
   flex-direction: column;
   border:none;
+  padding-top: 1.5rem;
+  width: 27rem;
 
   input:nth-child(2), input:nth-child(4){
     margin-top: 0.5rem;
     margin-bottom: 2rem;
     padding: 1rem 1rem;
-    min-width: 30rem;
+    min-width: 27rem;
+
+    @media screen and (min-width: $lg) {
+        min-width: 30rem;
+      }
   }
 
   label{
     margin-bottom: 0.5rem;
   }
+
+  @media screen and (min-width: $lg) {
+    padding-top: auto;
+  }
 }
 
 #login-form{
-  width: 32rem;
+  width: 100%;
   height: 16rem;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 .email-wrapper{
 
@@ -73,10 +85,13 @@
   position: absolute;
   width: 3rem;
   height: 3rem;
-  left: 1rem;
-  top: 1rem;
-  top: 2.7rem;
   background: transparent;
+  left: 27rem;
+  top: 0.7rem;
+
+  @media screen and (min-width: $lg) {
+    left: 30rem;
+  }
 
   svg {
     width: 25px;
@@ -85,4 +100,25 @@
     flex: none;
     object-fit: cover;
   }
+
+  @media screen and (min-width: $lg) {
+    left: 1rem;
+    top: 2.7rem;
+  }
+}
+
+.sign-helpers {
+    .btnbg {
+        min-width: 17rem;
+        padding: 0;
+
+        @media screen and (min-width: $lg) {
+            min-width: auto;
+            padding: auto;
+          }
+    }
+
+    @media screen and (min-width: $lg) {
+        justify-content: space-around;
+    }
 }

@@ -12,18 +12,43 @@
     justify-content: center;
     flex-direction: column;
     border:none;
+    align-items: center;
     margin-top: 7.5rem;
 
     input:nth-child(2), input:nth-child(4){
-      margin-top: 0.5rem;
-      margin-bottom: 2rem;
-      padding: 1rem 1rem;
-      min-width: 30rem;
+        padding: 1rem 1rem;
+        min-width: 27rem;
+        margin-top: 0.5rem;
+
+        @media screen and (min-width: $lg) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 
     label{
-      margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        @media screen and (min-width: $lg) {
+            margin-bottom: 0;
+        }
     }
+    .email-wrapper{
+        margin-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .password-wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+}
+
+#registerPassword{
+    margin-bottom: 1rem;
 }
 
 .avatar-wrapper{
@@ -35,8 +60,8 @@
         width: 5.5rem;
         height: 5.5rem;
         position: absolute;
-        top: -5.5rem;
-        left: 13.5rem;
+        top: -4.5rem;
+        left: 7.5rem;
         margin-top: -1rem;
     }
 
@@ -47,8 +72,8 @@
         height: 6rem;
         padding: 0 3rem;
         min-width: 5rem;
-        left: 10.2rem;
-        top: -5.3rem;
+        top: -4.5rem;
+        left: 7.5rem;
         z-index: 2;
     }
 }
@@ -59,9 +84,13 @@
     width: 3rem;
     height: 3rem;
     right: 0.8rem;
-    top: 2.7rem;
+    top: 3.3rem;
     background: linear-gradient(to bottom right, $btn-primary, $btn-primary1);
     border-radius: 50%;
+
+    @media screen and (min-width: $lg) {
+        top: 2.3rem;
+    }
 
     svg {
       width: 25px;
