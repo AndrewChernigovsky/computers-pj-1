@@ -1,13 +1,12 @@
 doctype
 html(lang="ru").page
-  include blocks/head
     block vars
-    title #{title}
-  body.page__body
-    block header
-    block main
-    block footer
-    block popups
-    block templates
-    include ../helpers/scripts
-    include ../helpers/btnUp
+    include blocks/head
+    body.page__body
+        block header
+        block main
+        block footer
+        block popups
+        block templates
+        include ../helpers/scripts
+        include ../helpers/btnUp
