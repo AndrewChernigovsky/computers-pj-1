@@ -37,7 +37,7 @@
   }
 
   @media screen and (min-width: $lg) {
-    padding-top: auto;
+    padding-top: 0;
   }
 }
 
@@ -114,7 +114,6 @@
 
         @media screen and (min-width: $lg) {
             min-width: auto;
-            padding: auto;
           }
     }
 
