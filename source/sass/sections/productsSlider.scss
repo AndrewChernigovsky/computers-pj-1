@@ -182,7 +182,7 @@
 
     &__button-prev{
         right: 20rem;
-        background-image: url(../image/icons/arrowBack.svg);
+        background-image: url("../image/icons/arrowBack.svg");
         background-position: 0.4rem;
 
         @media screen and (min-width: $lg) {
@@ -201,7 +201,7 @@
 
     &__button-next{
         left: 20rem;
-        background-image: url(../image/icons/arrowNext.svg);
+        background-image: url("../image/icons/arrowNext.svg");
         background-position: 0.6rem;
 
         @media screen and (min-width: $lg) {
